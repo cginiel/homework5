@@ -190,3 +190,6 @@ header{
   }
 
 }
+
+/*don't forget display: none; for print media query!!!*/
+/*remember to link the meta viewport for connecting mobile!!!! (link in hw4)*/
