@@ -55,14 +55,30 @@ footer{
 Keyframes for animation*/
 
 @-webkit-keyframes logo_wiggle{
+  0%{
+    width: 25px;
+  }
+
+  100%{
+    width: 420px;
+  }
 
 }
 
 @keyframes logo_wiggle{
+  0%{
+    width: 25px;
+  }
+
+  100%{
+    width: 420px;
+  }
 
 } 
 
 #logo{
+  animation-name: logo_wiggle;
+  animation-duration: 3s;
   
 }
 
@@ -137,6 +153,7 @@ header{
   
   background: #fff;
   border-bottom: 3px solid #50C7C7;
+  background-image: url('../images/logo.png') no-repeat;
 }
 
 .nav_links{
