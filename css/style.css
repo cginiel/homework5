@@ -6,7 +6,8 @@ body{
   font-family: 'Raleway', sans-serif; /* Test for this*/
   margin: 0;
   padding: 0;
-  font-size: 16pt; /* test for this! Make all sizes em or rem */
+  font-size: 1.35em; /* test for this! Make all sizes em or rem */
+  /*test how? (all i know is trial and error.) I don't know how to get the exact font as the starter code*/
   background-image: url('../images/concrete_seamless.png');
 }
 
@@ -14,7 +15,7 @@ h1{
   font-size: 2em;
   text-align: center;
   line-height: 2;
-  /*blah*/
+  /*blah*/ 
 }
 
 h2{
@@ -93,6 +94,8 @@ Keyframes for animation*/
   min-height: 500px;
   justify-content: center;
   align-items: center;
+  flex-basis: 400px;
+  /*not sure if flex-basis is useful here.*/
 }
 
 .card {
@@ -102,6 +105,8 @@ Keyframes for animation*/
   padding: 0 0 50px 0;
   width: 400px;
   /*is width OK? should it be a child flex property?*/
+  /*flex-basis doesn't work???*/
+  /*the '35' card stretches when the browser is enlarged*/
 }
 
 .card > header{
@@ -148,12 +153,10 @@ Keyframes for animation*/
 .gallery{
   display: flex;
   flex-flow: row wrap;
-  /*didn't declare flex-direction because the default is row, which is what I want*/
-  /*but is the comment worth the clarification? or should I have just declared the darn thing?*/
   min-height: 600px;
   justify-content: center;
   align-items: center;
-  /*I think I got min-height to work by declaring the proper flex-flow.*/
+  /*I think I got min-height to cooperate by declaring the proper flex-flow.*/
 }
 
 .gallery > img{
@@ -177,6 +180,8 @@ header{
 .nav_links{
  
   list-style: none;
+  padding: 5px;
+  /*added padding because the 'y' in 'gallery' was slipping into the line*/
 }
 
 .nav_item a{
@@ -195,6 +200,8 @@ header{
 
   /* Cards! */
   .card {
+    flex-basis: 225px;
+    /*I think I can safely say I don't understand flex-basis*/
     
   }
 
@@ -206,10 +213,18 @@ header{
   /* Navbar */
 
   header{
+    flex-direction: row;
+    justify-content: space-around;
+    /*align-self: flex-start;*/
     
   }
 
   .nav_links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: flex-end;
+    /*align-self not working*/
     
   }
 
@@ -222,6 +237,12 @@ header{
   
   .card {
     flex-basis: 200px;
+  }
+  body {
+    background: transparent;
+  }
+  #gallery .gallery {
+    display: none;
   }
 
 }
