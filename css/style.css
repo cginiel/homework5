@@ -1,3 +1,7 @@
+/*
+FLEX ᕙ(⇀‸↼‶)ᕗ BOX
+*/
+
 body{
   font-family: 'Raleway', sans-serif; /* Test for this*/
   margin: 0;
@@ -84,16 +88,20 @@ Keyframes for animation*/
 
 /* Cards! */
 .pricing{
-    min-height: 500px;
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-  
   margin: 12px;
   background: #fff;
   border-radius: 7px;
   padding: 0 0 50px 0;
+  width: 400px;
+  /*is width OK? should it be a child flex property?*/
 }
 
 .card > header{
@@ -138,8 +146,14 @@ Keyframes for animation*/
 /* Gallery! */
 
 .gallery{
-  
+  display: flex;
+  flex-flow: row wrap;
+  /*didn't declare flex-direction because the default is row, which is what I want*/
+  /*but is the comment worth the clarification? or should I have just declared the darn thing?*/
   min-height: 600px;
+  justify-content: center;
+  align-items: center;
+  /*I think I got min-height to work by declaring the proper flex-flow.*/
 }
 
 .gallery > img{
@@ -150,10 +164,14 @@ Keyframes for animation*/
 
 /* Navbar */
 header{
-  
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border-bottom: 3px solid #50C7C7;
   background-image: url('../images/logo.png') no-repeat;
+  align-items: center;
+  align-content: center;
+  /*I centered the nav links without using their class. Will this be a problem later?*/
 }
 
 .nav_links{
