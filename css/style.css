@@ -7,7 +7,7 @@ body{
   margin: 0;
   padding: 0;
   font-size: 1.35em; /* test for this! Make all sizes em or rem */
-  /*test how? (all i know is trial and error.) I don't know how to get the exact font as the starter code*/
+  /*test how? (all i know is trial and error.) I don't know how to get the exact font as the starter code (16pt)*/
   background-image: url('../images/concrete_seamless.png');
 }
 
@@ -84,7 +84,6 @@ Keyframes for animation*/
 #logo{
   animation-name: logo_wiggle;
   animation-duration: 3s;
-  
 }
 
 /* Cards! */
@@ -169,18 +168,21 @@ Keyframes for animation*/
 header{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background: #fff;
   border-bottom: 3px solid #50C7C7;
   background-image: url('../images/logo.png') no-repeat;
   align-items: center;
-  align-content: center;
+  /*align-content: center;*/
   /*I centered the nav links without using their class. Will this be a problem later?*/
 }
 
 .nav_links{
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   list-style: none;
-  padding: 5px;
+  padding-bottom: 5px;
   /*added padding because the 'y' in 'gallery' was slipping into the line*/
 }
 
@@ -214,18 +216,12 @@ header{
 
   header{
     flex-direction: row;
-    justify-content: space-around;
-    /*align-self: flex-start;*/
-    
+    /*I'm pretty sure using only flex-direction works because
+    we declared "space-between" earlier*/
   }
 
   .nav_links{
-    display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-self: flex-end;
-    /*align-self not working*/
-    
   }
 
   .nav_item a{
@@ -241,8 +237,12 @@ header{
   body {
     background: transparent;
   }
-  #gallery .gallery {
+  .gallery, #gallery {
     display: none;
+  }
+
+  .pricing{
+    /*align-items?*/
   }
 
 }
