@@ -93,7 +93,13 @@ Keyframes for animation*/
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  /*not sure if flex-basis is useful here.*/
+    
+  /*the issue here had to do with the main axis and the cross
+  axis. because I was formerly using flex-direction: column, I
+  was screwing up which axis I was justifying or aligning.
+  column seemed like the most intuitive option, when in fact
+  I needed to do flex-direction: row and wrap the row
+  (because the squished mobile view would stack them into a column).*/
 }
 
 .card {
@@ -102,10 +108,8 @@ Keyframes for animation*/
   background: #fff;
   border-radius: 7px;
   padding: 0 0 50px 0;
-  
-  /*is width OK? should it be a child flex property?*/
-  /*flex-basis doesn't work???*/
-  /*the '35' card stretches when the browser is enlarged*/
+  /*remember that flex-basis is a child property.
+  it won't work within a parent property.*/
 }
 
 .card > header{
@@ -201,8 +205,9 @@ header{
 @media screen and (min-width: 850px){
 
   /* Cards! */
+
   .card {
-    flex-basis: 225px;
+    flex-basis: 250px;
     /*I think I can safely say I don't understand flex-basis*/
     
   }
