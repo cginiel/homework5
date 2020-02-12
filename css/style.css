@@ -89,20 +89,20 @@ Keyframes for animation*/
 /* Cards! */
 .pricing{
   display: flex;
-  flex-direction: column;
   min-height: 500px;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  flex-basis: 400px;
   /*not sure if flex-basis is useful here.*/
 }
 
 .card {
+  flex-basis: 400px;
   margin: 12px;
   background: #fff;
   border-radius: 7px;
   padding: 0 0 50px 0;
-  width: 400px;
+  
   /*is width OK? should it be a child flex property?*/
   /*flex-basis doesn't work???*/
   /*the '35' card stretches when the browser is enlarged*/
