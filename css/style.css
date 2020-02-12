@@ -82,6 +82,8 @@ Keyframes for animation*/
 } 
 
 #logo{
+  -webkit-animation-name: logo_wiggle;
+  -webkit-animation-duration: 3s;
   animation-name: logo_wiggle;
   animation-duration: 3s;
 }
@@ -247,9 +249,20 @@ header{
   }
 
   .pricing{
-    /*align-items?*/
+    align-items: flex-start;
   }
 
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  #logo{
+    -webkit-animation: none;
+    animation: none;
+  }
 }
 
 /*don't forget display: none; for print media query!!!*/
