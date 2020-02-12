@@ -7,7 +7,6 @@ body{
   margin: 0;
   padding: 0;
   font-size: 1.35em; /* test for this! Make all sizes em or rem */
-  /*test how? (all i know is trial and error.) I don't know how to get the exact font as the starter code (16pt)*/
   background-image: url('../images/concrete_seamless.png');
 }
 
@@ -264,6 +263,3 @@ header{
     animation: none;
   }
 }
-
-/*don't forget display: none; for print media query!!!*/
-/*remember to link the meta viewport for connecting mobile!!!! (link in hw4)*/
