@@ -257,7 +257,7 @@ header{
       scroll-behavior: auto; /* Removes scroll animation */
   }
 
-  .skip a{
+  a.skip{
     -webkit-transition: none;
     transition: none;
   }
