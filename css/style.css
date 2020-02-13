@@ -178,8 +178,6 @@ header{
   border-bottom: 3px solid #50C7C7;
   background-image: url('../images/logo.png') no-repeat;
   align-items: center;
-  /*align-content: center;*/
-  /*I centered the nav links without using their class. Will this be a problem later?*/
 }
 
 .nav_links{
@@ -228,6 +226,7 @@ header{
 
   .nav_links{
     flex-direction: row;
+    padding-bottom: 0;
   }
 
   .nav_item a{
@@ -256,6 +255,11 @@ header{
 @media screen and (prefers-reduced-motion: reduce){
   html{
       scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
   }
 
   #logo{
